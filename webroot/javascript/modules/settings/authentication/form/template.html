@@ -1,0 +1,48 @@
+<div class="ui form">
+    <h3 class="ui header" data-i18n="settings.title.user-auth" data-tip="settings.tips.user-auth"></h3>
+    <div class="inline field">
+        <div class="ui toggle checkbox">
+            <input type="checkbox" name="authConfig.baseUserName" <% if(baseUserName){ %>checked<% } %>>
+            <label data-i18n="settings.title.allow-auth"></label>
+        </div>
+    </div>
+    <div class="inline field">
+        <div class="ui toggle checkbox">
+            <input type="checkbox" name="authConfig.anonymousUser" <% if(anonymousUser){ %>checked<% } %>>
+            <label data-i18n="settings.title.allow-anonymous"></label>
+        </div>
+    </div>
+    <div class="locale_en_only">
+    <h4 class="ui header" data-tip="settings.tip.facebook">Facebook</h4>
+    <div class="inline field">
+        <div class="ui toggle checkbox">
+            <input type="checkbox" name="authConfig.faceBookAuth.authEnable" <% if(faceBookAuth){ %>checked<% } %>>
+            <label data-i18n="settings.title.allow-facebook"></label>
+        </div>
+    </div>
+    <div class="field">
+        <label data-i18n="settings.title.facebook-app" data-tip="settings.tips.facebook-app"></label>
+        <div class="fbapp-list">
+            <% for(var i in faceBookKey){ %>
+            <div class="fbapp-item container-flex">
+                <input type="text" class="form-control flex-1" value="<%= faceBookKey[i].appId %>" name="authConfig.faceBookAuth.appInfos[]appId"/>
+                <input type="text" class="form-control flex-1" value="<%= faceBookKey[i].secret %>" name="authConfig.faceBookAuth.appInfos[]secret" style="margin-left: 10px;"/>
+                <i class="fa fa-times-circle"></i>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <h4 class="ui header" data-tip="settings.tip.twitter">Twitter</h4>
+    <div class="inline field">
+        <div class="ui toggle checkbox">
+            <input type="checkbox" name="authConfig.twitterAuth.authEnable" <% if(twitterAuth){ %>checked<% } %>>
+            <label data-i18n="settings.title.allow-twitter"></label>
+        </div>
+    </div>
+    <div class="field">
+        <label data-i18n="settings.title.twitter-key" data-tip="settings.tips.twitter-key"></label>
+        <input type="text" name="authConfig.twitterAuth.consumerKeys[]" value="<%- twitterKey %>" data-i18n="[placeholder]settings.placeholder.twitter-key"/>
+    </div>
+    </div>
+    <div class="ui primary submit button right floated" data-i18n="common.tag.save-change"></div>
+</div>

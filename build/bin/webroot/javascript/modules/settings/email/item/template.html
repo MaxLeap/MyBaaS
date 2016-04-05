@@ -1,0 +1,64 @@
+<div>
+    <h3 class="title ui header item-title" data-i18n="settings.title.email" data-tip="settings.tips.edit-email-template"></h3>
+    <div class="ui info message">
+        <p data-i18n="settings.tip.email-template"></p>
+        <ul class="list">
+            <li><b>{{username}}</b><span data-i18n="settings.tip.email-template-username"></span></li>
+            <li><b>{{email}}</b><span data-i18n="settings.tip.email-template-email"></span></li>
+            <li><b>{{appname}}</b><span data-i18n="settings.tip.email-template-appname"></span></li>
+            <li><b>{{link}}</b><span data-i18n="settings.tip.email-template-link"></span></li>
+        </ul>
+    </div>
+    <div id="email_template_form" class="form-horizontal form-bordered ui form loading" role="form" autocomplete="off">
+        <form class="ui form  app-email-template  template-item">
+            <!-- <h4 class="ui header" data-i18n="settings.title.app-email-template"></h4> -->
+            <div class="two fields">
+                <div class="twelve wide field">
+                    <label data-i18n="settings.label.templateName" data-tip="settings.tip.templateName"></label>
+                    <input type="text" name="templateName" data-i18n="[placeholder]settings.label.templateName" class="validate validate-required" value="" />
+                </div>
+                <div class="four wide field required">
+                    <label data-i18n="settings.label.locale" data-tip="settings.tip.locale"></label>
+                    <div class="ui selection dropdown dropdown-language dropdown2-parts search" style="width: 100%">
+                        <input name="language" class="validate validate-arrayrequired js-value-input" type="hidden" value="en">
+                        <div class="default text"></div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <!-- <div class="item" data-value="en"><i class="us flag"></i>English</div> <div class="item" data-value="zh"><i class="cn flag"></i>Chinese (Simplified)</div> <div class="item" data-value="tw"><i class="tw flag"></i>Chinese (Traditional)</div> <div class="item" data-value="ja"><i class="jp flag"></i>Japanese</div> <div class="item" data-value="fr"><i class="fr flag"></i>French</div>
+                            <div class="item" data-value="af"><i class="af flag"></i>Afrikaans</div><div class="item" data-value="am"><i class="am flag"></i>Amharic</div><div class="item" data-value="an"><i class="an flag"></i>Aragonese</div><div class="item" data-value="ar"><i class="ar flag"></i>Arabic</div><div class="item" data-value="as"><i class="as flag"></i>Assamese</div><div class="item" data-value="az"><i class="az flag"></i>Azerbaijani</div><div class="item" data-value="ba"><i class="ba flag"></i>Bashkir</div><div class="item" data-value="be"><i class="be flag"></i>Belarusian</div><div class="item" data-value="bg"><i class="bg flag"></i>Bulgarian</div><div class="item" data-value="bh"><i class="bh flag"></i>Bihari</div><div class="item" data-value="bi"><i class="bi flag"></i>Bislama</div><div class="item" data-value="bm"><i class="bm flag"></i>Bambara</div><div class="item" data-value="bn"><i class="bn flag"></i>Bengali</div><div class="item" data-value="bo"><i class="bo flag"></i>Tibetan Stan...</div><div class="item" data-value="br"><i class="br flag"></i>Breton</div><div class="item" data-value="bs"><i class="bs flag"></i>Bosnian</div><div class="item" data-value="ca"><i class="ca flag"></i>Catalan; Val...</div><div class="item" data-value="ch"><i class="ch flag"></i>Chamorro</div><div class="item" data-value="co"><i class="co flag"></i>Corsican</div><div class="item" data-value="cr"><i class="cr flag"></i>Cree</div><div class="item" data-value="cs"><i class="cs flag"></i>Czech</div><div class="item" data-value="cu"><i class="cu flag"></i>Old Church S...</div><div class="item" data-value="cv"><i class="cv flag"></i>Chuvash</div><div class="item" data-value="cy"><i class="cy flag"></i>Welsh</div><div class="item" data-value="de"><i class="de flag"></i>German</div><div class="item" data-value="ee"><i class="ee flag"></i>Ewe</div><div class="item" data-value="es"><i class="es flag"></i>Spanish; Cas...</div><div class="item" data-value="et"><i class="et flag"></i>Estonian</div><div class="item" data-value="eu"><i class="eu flag"></i>Basque</div><div class="item" data-value="fi"><i class="fi flag"></i>Finnish</div><div class="item" data-value="fj"><i class="fj flag"></i>Fijian</div><div class="item" data-value="fo"><i class="fo flag"></i>Faroese</div><div class="item" data-value="ga"><i class="ga flag"></i>Irish</div><div class="item" data-value="gd"><i class="gd flag"></i>Scottish Gae...</div><div class="item" data-value="gl"><i class="gl flag"></i>Galician</div><div class="item" data-value="gn"><i class="gn flag"></i>Guaraní</div><div class="item" data-value="gu"><i class="gu flag"></i>Gujarati</div><div class="item" data-value="hr"><i class="hr flag"></i>Croatian</div><div class="item" data-value="ht"><i class="ht flag"></i>Haitian; Hai...</div><div class="item" data-value="hu"><i class="hu flag"></i>Hungarian</div><div class="item" data-value="id"><i class="id flag"></i>Indonesian</div><div class="item" data-value="ie"><i class="ie flag"></i>Interlingue</div><div class="item" data-value="io"><i class="io flag"></i>Ido</div><div class="item" data-value="is"><i class="is flag"></i>Icelandic</div><div class="item" data-value="it"><i class="it flag"></i>Italian</div><div class="item" data-value="kg"><i class="kg flag"></i>Kongo</div><div class="item" data-value="ki"><i class="ki flag"></i>Kikuyu, Giku...</div><div class="item" data-value="km"><i class="km flag"></i>Khmer</div><div class="item" data-value="kn"><i class="kn flag"></i>Kannada</div><div class="item" data-value="kr"><i class="kr flag"></i>Kanuri</div><div class="item" data-value="kw"><i class="kw flag"></i>Cornish</div><div class="item" data-value="ky"><i class="ky flag"></i>Kirghiz, Kyr...</div><div class="item" data-value="la"><i class="la flag"></i>Latin</div><div class="item" data-value="lb"><i class="lb flag"></i>Luxembourgis...</div><div class="item" data-value="li"><i class="li flag"></i>Limburgish, ...</div><div class="item" data-value="lt"><i class="lt flag"></i>Lithuanian</div><div class="item" data-value="lu"><i class="lu flag"></i>Luba-Katanga...</div><div class="item" data-value="lv"><i class="lv flag"></i>Latvian</div><div class="item" data-value="mg"><i class="mg flag"></i>Malagasy</div><div class="item" data-value="mh"><i class="mh flag"></i>Marshallese</div><div class="item" data-value="mk"><i class="mk flag"></i>Macedonian</div><div class="item" data-value="ml"><i class="ml flag"></i>Malayalam</div><div class="item" data-value="mn"><i class="mn flag"></i>Mongolian</div><div class="item" data-value="mr"><i class="mr flag"></i>Marathi (Mar...</div><div class="item" data-value="ms"><i class="ms flag"></i>Malay</div><div class="item" data-value="mt"><i class="mt flag"></i>Maltese</div><div class="item" data-value="my"><i class="my flag"></i>Burmese</div><div class="item" data-value="na"><i class="na flag"></i>Nauru</div><div class="item" data-value="ne"><i class="ne flag"></i>Nepali</div><div class="item" data-value="ng"><i class="ng flag"></i>Ndonga</div><div class="item" data-value="nl"><i class="nl flag"></i>Dutch</div><div class="item" data-value="no"><i class="no flag"></i>Norwegian</div><div class="item" data-value="nr"><i class="nr flag"></i>South Ndebel...</div><div class="item" data-value="om"><i class="om flag"></i>Oromo</div><div class="item" data-value="pa"><i class="pa flag"></i>Panjabi, Pun...</div><div class="item" data-value="pl"><i class="pl flag"></i>Polish</div><div class="item" data-value="ps"><i class="ps flag"></i>Pashto, Push...</div><div class="item" data-value="pt"><i class="pt flag"></i>Portuguese</div><div class="item" data-value="ro"><i class="ro flag"></i>Romanian, Mo...</div><div class="item" data-value="ru"><i class="ru flag"></i>Russian</div><div class="item" data-value="rw"><i class="rw flag"></i>Kinyarwanda</div><div class="item" data-value="sa"><i class="sa flag"></i>Sanskrit (Sa...</div><div class="item" data-value="sc"><i class="sc flag"></i>Sardinian</div><div class="item" data-value="sd"><i class="sd flag"></i>Sindhi</div><div class="item" data-value="se"><i class="se flag"></i>Northern Sam...</div><div class="item" data-value="sg"><i class="sg flag"></i>Sango</div><div class="item" data-value="si"><i class="si flag"></i>Sinhala, Sin...</div><div class="item" data-value="sk"><i class="sk flag"></i>Slovak</div><div class="item" data-value="sl"><i class="sl flag"></i>Slovene</div><div class="item" data-value="sm"><i class="sm flag"></i>Samoan</div><div class="item" data-value="sn"><i class="sn flag"></i>Shona</div><div class="item" data-value="so"><i class="so flag"></i>Somali</div><div class="item" data-value="sr"><i class="sr flag"></i>Serbian</div><div class="item" data-value="st"><i class="st flag"></i>Southern Sot...</div><div class="item" data-value="sv"><i class="sv flag"></i>Swedish</div><div class="item" data-value="tg"><i class="tg flag"></i>Tajik</div><div class="item" data-value="th"><i class="th flag"></i>Thai</div><div class="item" data-value="tk"><i class="tk flag"></i>Turkmen</div><div class="item" data-value="tl"><i class="tl flag"></i>Tagalog</div><div class="item" data-value="tn"><i class="tn flag"></i>Tswana</div><div class="item" data-value="to"><i class="to flag"></i>Tonga (Tonga...</div><div class="item" data-value="tr"><i class="tr flag"></i>Turkish</div><div class="item" data-value="tt"><i class="tt flag"></i>Tatar</div><div class="item" data-value="ug"><i class="ug flag"></i>Uighur, Uygh...</div><div class="item" data-value="uz"><i class="uz flag"></i>Uzbek</div><div class="item" data-value="ve"><i class="ve flag"></i>Venda</div><div class="item" data-value="vi"><i class="vi flag"></i>Vietnamese</div><div class="item" data-value="za"><i class="za flag"></i>Zhuang, Chua...</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fields two">
+                <div class="field required">
+                    <label data-i18n="settings.label.from" data-tip="settings.tip.from"></label>
+                    <input type="text" name="from" data-i18n="[placeholder]settings.label.from" class="validate validate-required" value="" />
+                </div>
+                <div class="field" style="display: none;">
+                    <label data-i18n="settings.label.domain" data-tip="settings.tip.domain"></label>
+                    <input type="text" name="domain" data-i18n="[placeholder]settings.label.domain" class="validate validate-required" value="" />
+                </div>
+                <div class="field required">
+                    <label data-i18n="settings.label.subject" data-tip="settings.tip.subject"></label>
+                    <input type="text" name="subject" data-i18n="[placeholder]settings.label.subject" class="validate validate-required" value="" />
+                </div>
+            </div>
+
+            <div class="field" style="display:none;">
+                <label data-i18n="settings.label.text" data-tip="settings.tip.text"></label>
+                <textarea name="text" data-i18n="[placeholder]settings.label.text" rows="10" value="" />
+                </textarea>
+            </div>
+            <div class="field required">
+                <label data-i18n="settings.label.content" data-tip="settings.tip.content"></label>
+                <textarea name="content" data-i18n="[placeholder]settings.label.content" class="validate validate-required" rows="10"></textarea>
+            </div>
+        </form>
+
+    </div>
+    <div class="ui pull-right">
+        <a class="ui button  basic" href="#email" data-i18n="settings.tag.cancel"></a>
+        <a class="ui button primary  btn-save " href="javascript:void(null);" data-i18n="settings.tag.save" ></a>
+    </div>
+</div>

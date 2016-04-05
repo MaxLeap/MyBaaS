@@ -1,0 +1,75 @@
+<div class="ui form">
+    <h3 class="ui header" data-i18n="settings.title.app-keys" data-tip="settings.tips.app-keys"></h3>
+    <div class="field">
+        <label data-tip="settings.tip.application-id">Application ID</label>
+        <div class="ui small action input">
+            <input type="text" readonly value="<%- objectId %>" >
+            <div class="ui labeled icon buttons">
+                <div class="ui button copy-btn" data-clipboard-text="<%- objectId %>">
+                    <span data-i18n="common.tag.copy"></span>
+                    <i class="copy icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label data-tip="settings.tip.client-key">Client Key</label>
+        <div class="ui small action input">
+            <input type="text" readonly value="<%- clientKey %>" >
+            <div class="ui labeled icon buttons">
+                <div class="ui button copy-btn" data-clipboard-text="<%- clientKey %>">
+                    <span data-i18n="common.tag.copy"></span>
+                    <i class="copy icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label data-tip="settings.tip.javascript-key">Javascript Key</label>
+        <div class="ui small action input">
+            <input type="text" readonly value="<%- javascriptKey %>" >
+            <div class="ui labeled icon buttons">
+                <div class="ui button copy-btn" data-clipboard-text="<%- javascriptKey %>">
+                    <span data-i18n="common.tag.copy"></span>
+                    <i class="copy icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!--   <div class="field">
+        <label data-tip="settings.tip.dotnet-key">.NET Key</label>
+        <div class="ui small action input">
+            <input type="text" readonly value="<%- netKey %>" >
+            <div class="ui labeled icon buttons">
+                <div class="ui button copy-btn" data-clipboard-text="<%- netKey %>">
+                    Copy
+                    <i class="copy icon"></i>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="field">
+        <label data-tip="settings.tip.rest-key">REST API Key</label>
+        <div class="ui small action input">
+            <input type="text" readonly value="<%- restAPIKey %>" >
+            <div class="ui labeled icon buttons">
+                <div class="ui button copy-btn" data-clipboard-text="<%- restAPIKey %>">
+                    <span data-i18n="common.tag.copy"></span>
+                    <i class="copy icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label data-tip="settings.tip.master-key">Master Key</label>
+        <div class="ui small action input">
+            <input type="text" readonly value="<%- masterKey %>" >
+            <div class="ui labeled icon buttons">
+                <div class="ui button copy-btn" data-clipboard-text="<%- masterKey %>">
+                    <span data-i18n="common.tag.copy"></span>
+                    <i class="copy icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

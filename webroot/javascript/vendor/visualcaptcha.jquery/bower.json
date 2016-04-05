@@ -1,0 +1,25 @@
+{
+  "name": "visualcaptcha.jquery",
+  "version": "0.0.5",
+  "homepage": "http://visualcaptcha.net",
+  "authors": [
+    "emotionLoop <hello@emotionloop.com>"
+  ],
+  "main": "visualcaptcha.jquery.js",
+  "keywords": [
+    "captcha",
+    "visualcaptcha",
+    "security",
+    "javascript",
+    "library",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

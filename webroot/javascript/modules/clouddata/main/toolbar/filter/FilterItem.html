@@ -1,0 +1,37 @@
+<div class="field" data-type="column">
+    <div class="ui basic button dropdown">
+        <input type="hidden" name="type">
+        <div class="text">
+            <%= isInColumnList(data.column_list,data.column,"common.tag.select-column") %>
+        </div>
+        <i class="angle down icon dropdown"></i>
+        <div class="menu">
+            <div class="scrolling menu">
+                <%= generateColumnList(data.column_list) %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="field" data-type="op">
+    <div class="ui basic button dropdown">
+        <input type="hidden" name="type">
+        <div class="text">
+            <%= isInList(data.op_list[data.type]||[],data.op,"common.tag.select-op") %>
+        </div>
+        <i class="angle down icon dropdown"></i>
+        <div class="menu">
+            <%
+            if(data&&data.column=="objectId"){
+            var list = data.op_list[data.type];
+            print(generateList((list||[]).slice(0,list.length-1)));
+            }else{
+            print(generateList(data.op_list[data.type]||[]));
+            }
+            %>
+        </div>
+    </div>
+</div>
+<div class="field" data-type="value">
+    <%= generateValueEditor() %>
+</div>
+<i class="large remove circle icon"></i>

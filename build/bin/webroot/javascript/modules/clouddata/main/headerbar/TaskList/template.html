@@ -1,0 +1,63 @@
+<div class="ui form">
+    <div class="toolbar">
+        <div class="pull-left" style="margin-right: 10px;">
+            <div class="dropdown-parts time ui dropdown selection">
+                <input type="hidden" name="status" value="week">
+                <i class="dropdown icon"></i>
+                <div class="default text" data-i18n="cloudconfig.tag.time"></div>
+                <div class="menu">
+                    <div class="item" data-value="week" data-i18n="clouddata.tag.last-week"></div>
+                    <div class="item" data-value="month" data-i18n="clouddata.tag.last-month"></div>
+                    <div class="item" data-value="3month" data-i18n="clouddata.tag.last-3-month"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pull-left">
+            <div class="dropdown-parts type ui dropdown selection">
+                <input type="hidden" name="status" value="all">
+                <i class="dropdown icon"></i>
+                <div class="default text" data-i18n="cloudconfig.tag.type"></div>
+                <div class="menu">
+                    <div class="item" data-value="all" data-i18n="clouddata.tag.all-type"></div>
+                    <div class="item" data-value="1" data-i18n="clouddata.tag.data-import"></div>
+                    <div class="item" data-value="0" data-i18n="clouddata.tag.data-export"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pull-right">
+            <div class="ui search">
+                <div class="ui icon input">
+                    <input type="text" data-i18n="[placeholder]common.placeholder.search" name="search">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-content"></div>
+    <div class="sub-table" style="display:none;">
+        <table class="ui definition celled table segment">
+            <tbody>
+                <tr>
+                    <td data-i18n="clouddata.tag.class-name"></td>
+                    <td class="class-name"></td>
+                </tr>
+                <tr>
+                    <td data-i18n="clouddata.tag.type"></td>
+                    <td class="type"></td>
+                </tr>
+                <tr>
+                    <td data-i18n="clouddata.tag.desc"></td>
+                    <td class="desc"></td>
+                </tr>
+                <tr>
+                    <td data-i18n="clouddata.tag.logs"></td>
+                    <td class="logs">
+                        <div class="log-content">
+
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,256 @@
+ /*
+ * # Semantic UI - 1.9.2
+ * https://github.com/Semantic-Org/Semantic-UI
+ * http://www.semantic-ui.com/
+ *
+ * Copyright 2014 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+* # Semantic UI - 1.8.1
+* https://github.com/Semantic-Org/Semantic-UI
+* http://www.semantic-ui.com/
+*
+* Copyright 2014 Contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+*/
+
+
+/*******************************
+            Dropdown
+*******************************/
+
+.ui.dropdown.multiple {
+  width: 100%;
+  padding: 0;
+}
+
+
+/*******************************
+            Content
+*******************************/
+
+.ui.dropdown.multiple .choice {
+  overflow: hidden;
+  padding: 0 5px;
+  background: #ffffff;
+}
+.ui.dropdown.multiple .choice > .ui.label {
+  margin-top: 5px;
+  margin-right: 5px;
+  float: left;
+}
+.ui.dropdown.multiple .choice > .ui.label.active {
+  background-color: black;
+  color: white;
+}
+.ui.dropdown.multiple .choice > input {
+  float: left;
+  padding: 10px 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  outline: 0;
+  background: none;
+  box-shadow: none;
+}
+.ui.dropdown.multiple > .measure {
+  display: none;
+}
+.ui.dropdown.multiple .icon.dropdown {
+  display: none;
+}
+.ui.dropdown.multiple > .menu {
+  width: 100%;
+}
+
+/*--------------
+      Menu
+---------------*/
+
+
+/*--------------
+ Dropdown Icon
+---------------*/
+
+.ui.dropdown.multiple > .icon.dropdown {
+  top: 10px;
+}
+
+/*--------------
+      Text
+---------------*/
+
+.ui.dropdown.multiple > .text {
+  top: 10px;
+  left: 5px;
+  position: absolute;
+}
+
+/*--------------
+    Menu Item
+---------------*/
+
+.ui.dropdown.multiple > .menu > .item.chosen {
+  display: none;
+}
+
+/*--------------
+  Floated Content
+---------------*/
+
+
+/*--------------
+  Menu Divider
+---------------*/
+
+
+/*-----------------
+  Item Description
+-------------------*/
+
+
+/*--------------
+    Sub Menu
+---------------*/
+
+
+
+/*******************************
+            Coupling
+*******************************/
+
+
+/*--------------
+   Sub Elements
+---------------*/
+
+
+/*--------------
+     Image
+---------------*/
+
+
+/*--------------
+      Menu
+---------------*/
+
+
+/*--------------
+     Button
+---------------*/
+
+
+
+/*******************************
+              Types
+*******************************/
+
+
+/*--------------
+   Searchable
+---------------*/
+
+
+/*--------------
+     Inline
+---------------*/
+
+
+
+/*******************************
+            States
+*******************************/
+
+
+/*--------------------
+        Hover
+----------------------*/
+
+
+/*--------------------
+        Active
+----------------------*/
+
+
+/*--------------------
+     Default Text
+----------------------*/
+
+
+/*--------------------
+        Loading
+----------------------*/
+
+
+/*--------------------
+    Keyboard Select
+----------------------*/
+
+
+/*--------------------
+    Search Filtered
+----------------------*/
+
+
+/*--------------------
+        Error
+----------------------*/
+
+
+/*--------------------
+        Disabled
+----------------------*/
+
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*--------------
+    Direction
+---------------*/
+
+
+/*--------------
+     Upward
+---------------*/
+
+
+/*--------------
+     Simple
+---------------*/
+
+
+/*--------------
+      Fluid
+---------------*/
+
+
+/*--------------
+    Floating
+---------------*/
+
+
+/*--------------
+     Pointing
+---------------*/
+
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+        User Overrides
+*******************************/
+

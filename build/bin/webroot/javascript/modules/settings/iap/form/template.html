@@ -1,0 +1,29 @@
+<div class="ui form">
+    <h4 class="ui header" data-i18n="settings.title.google-play" data-tip="settings.tips.google-play"></h4>
+    <div class="field">
+        <label data-i18n="settings.title.refresh-token" data-tip="settings.tips.refresh-token"></label>
+        <input type="text" name="iap.GooglePlay.refreshToken" value="<%- googleRefreshToken %>">
+    </div>
+    <div class="field">
+        <label data-i18n="settings.title.client-id" data-tip="settings.tips.client-id"></label>
+        <input type="text" name="iap.GooglePlay.clientId" value="<%- googleClientId %>">
+    </div>
+    <div class="field">
+        <label data-i18n="settings.title.client-secret" data-tip="settings.tips.client-secret"></label>
+        <input type="text" name="iap.GooglePlay.clientSecret" value="<%- googleClientSecret %>">
+    </div>
+    <!-- <div class="field">
+        <label data-i18n="settings.title.default-access-token"></label>
+        <input type="text" name="iap.GooglePlay.defaultAccessToken" value="<%- googleDefaultAccessToken %>">
+    </div> -->
+
+    <h4 class="ui header" data-i18n="settings.title.amazon" data-tip="settings.tips.amazon"></h4>
+
+    <div class="field">
+        <label data-i18n="settings.title.developer-secret" data-tip="settings.tips.developer-secret"></label>
+        <input type="text" name="iap.Amazon.developerSecret" value="<%- amazonDevelopSecret %>">
+    </div>
+
+    <div class="ui clearing"></div>
+    <div class="ui primary submit button right floated" data-i18n="common.tag.save-change"></div>
+</div>

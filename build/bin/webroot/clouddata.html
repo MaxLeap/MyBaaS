@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
+<html>
+<head>
+    <!-- Basic -->
+    <title>Console | MaxLeap</title>
+
+    <!-- Define Charset -->
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsive Metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Page Description and Author -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Page Description and Author -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- common css -->
+    <script>
+        var getIEVersion = function () {
+            var version = 999999;
+            if (navigator.appName == 'Microsoft Internet Explorer') {
+                new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent);
+                version = parseInt(RegExp.$1);
+            } else if ("ActiveXObject" in window) {
+                version = 11;
+            }
+            return version;
+        };
+        if(getIEVersion() < 10){
+            window.location.href = '/outdatedbrowser';
+        }
+    </script>
+    <script>window.locale = "zh";</script>
+    <script type="text/javascript">
+        (function () {
+            try {
+                window.localStorage.setItem('testkey', '');
+            } catch (error) {
+                if(window.locale==='zh'){
+                    alert("请关闭隐身模式");
+                }else{
+                    alert("Please exit private mode");
+                }
+            }
+        }());
+    </script>
+
+<link rel="stylesheet" href="/stylesheets/clouddata.css?version=1456285440659"/>
+<!-- Page Level Script -->
+<script type="text/javascript" src="/javascript/vendor/requirejs/require.js"
+        data-main="/javascript/clouddataMain.js?version=1456285440659"></script>
+</head>
+<body>
+<!-- BEGIN NAVBAR -->
+<script type="text/javascript">
+    function gh(){
+        var lang = localStorage.getItem('language');
+        if(lang)lang=lang.replace(/"/g,'');
+        lang = (lang=='zh'||lang=='tw')?'zh_cn':'en_us';
+        window.location.pathname = '/'+(lang?(lang+'/index.html'):'');
+    }
+</script>
+
+<div id="header-nav">
+    <a id="logo" class="pull-left" href="/"></a>
+    <div id="module-menu" class="pull-left">
+        <i class="icomoon icomoon-menu"></i>
+        <div class="menu-content"></div>
+    </div>
+
+    <div id="user-menu" class="ui dropdown pull-right" tabindex="0">
+        <div class="text">
+            <i class="icomoon icomoon-user"></i>
+        </div>
+        <div class="menu" tabindex="-1">
+            <div class="item profile">
+                <a href="/profile">
+                    <i class="icomoon icomoon-useri"></i><span data-i18n="common.module.profile"></span>
+                </a>
+            </div>
+            <div class="item logout">
+                <a href="javascript:void(0)">
+                    <i class="icomoon icomoon-logout"></i><span data-i18n="common.title.logout"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="language-menu" class="ui dropdown pull-right" tabindex="0">
+        <div class="text">
+            <i class="icomoon icomoon-earth"></i>
+        </div>
+        <div class="menu" tabindex="-1">
+            <div class="item" data-value="en">
+                <i class="us flag"></i>
+                <a href="javascript:void(0)">English</a>
+            </div>
+            <div class="item" data-value="zh">
+                <i class="cn flag"></i>
+                <a href="javascript:void(0)">中文</a>
+            </div>
+            <div class="item" data-value="jp" style="display: none;">
+                <i class="jp flag"></i>
+                <a href="javascript:void(0)">日本語</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END NAVBAR -->
+
+<div id="main-sidebar">
+    <div class="header">
+        <i class="icomoon icomoon-devcenter"></i>
+    </div>
+    <div class="list">
+        <a href="javascript:void(0);" class="active" data-value="0">
+            <i class="icomoon icomoon-data"></i>
+            <div class="tip" data-i18n="common.module.clouddata"></div>
+        </a>
+    </div>
+</div>
+
+
+<div id="main-container">
+    <div id="main-toolbar">
+        <div class="module-name"></div>
+        <div class="toolbar-content">
+            <div id="app-selector"></div>
+        </div>
+    </div>
+    <div class="main-content white no-padding">
+        <div id="clouddata-main"></div>
+    </div>
+</div>
+
+<!-- BEGIN FOOTER -->
+<div id="app-dialog-wrapper" class="ui dimmer modals page">
+    <!--<div class="ui loader"></div>-->
+    <div  id="app-dialog" class="ui modal">
+        <i class="close icon"></i>
+        <div class="header"></div>
+        <div class="actions">
+            <div class="ui button negative">Cancel</div>
+            <div class="ui primary button positive">Apply</div>
+        </div>
+    </div>
+</div>
+<div class="side-contact-article-en">
+    <div id="side-contact-article">
+        <h3>Send us a message</h3><a class="close icomoon-cancel" href="javascript:void(0);"></a>
+        <form class="contact-form">
+            <div class="field email">
+                <input type="text" name="from" autocapitalize="off" placeholder="Your Email Address" />
+            </div>
+            <div class="field message">
+                <textarea name="text" cols="30" rows="10" placeholder="Message (Required)"></textarea>
+            </div>
+        </form>
+        <a href="javascript:void(0);" class="action_button send-msg-btn">Send</a>
+        <i class="icomoon-down-dir side-contact-tail"></i>
+    </div>
+
+    </a>
+</div>
+<div class="side-contact-article-zh">
+    <div id="side-contact-article">
+        <h3>信息反馈</h3><a class="close icomoon-cancel" href="javascript:void(0);"></a>
+        <form class="contact-form">
+            <div class="field email">
+                <input type="text" name="from" autocapitalize="off" placeholder="您的邮件地址" />
+            </div>
+            <div class="field message">
+                <textarea name="text" cols="30" rows="10" placeholder="反馈信息（必填）"></textarea>
+            </div>
+        </form>
+        <a href="javascript:void(0);" class="action_button send-msg-btn">发送</a>
+        <i class="icomoon-down-dir side-contact-tail"></i>
+    </div>
+
+    </a>
+</div>
+
+<div id="app-dimmer"></div>
+<!-- END FOOTER -->
+<div id="common-loader" class="common-loader page-loader">
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+<style type="text/css">
+    @-webkit-keyframes rotatee {
+        100% {
+            -webkit-transform: rotate(360deg)
+        }
+    }
+
+    @keyframes rotatee {
+        100% {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes bouncee {
+        0%, 100% {
+            -webkit-transform: scale(0.0)
+        }
+        50% {
+            -webkit-transform: scale(1.0)
+        }
+    }
+
+    @keyframes bouncee {
+        0%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        }
+        50% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+
+    .common-loader {
+        background: #fff;
+        background-color: rgba(255, 255, 255);
+        z-index: 9999999999;
+    }
+
+    .common-loader .spinner {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        left: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        -webkit-animation: rotatee 2.0s infinite linear;
+        animation: rotatee 2.0s infinite linear;
+    }
+
+    .common-loader .dot1, .dot2 {
+        width: 60%;
+        height: 60%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        background-color: #0a9fd8;
+        border-radius: 100%;
+        -webkit-animation: bouncee 2.0s infinite ease-in-out;
+        animation: bouncee 2.0s infinite ease-in-out;
+    }
+
+    .common-loader .dot2 {
+        top: auto;
+        bottom: 0;
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+
+    .page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-loader {
+        position: absolute;
+        top: 114px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-loader .spinner {
+        top: 40%;
+    }
+</style>
+
+</body>
+</html>

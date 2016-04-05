@@ -1,0 +1,10 @@
+<div class="timeline-item <% if(count>1){ %>multi<% } %>" style="left:<%= offset %>px;" data-value="<%= id %>">
+    <div class="content">
+        <a class="ui event-<%= event.eventType %> empty circular label"></a>
+        <div class="time"><%= event.time %></div>
+        <div class="text"><%= event.eventId %></div>
+        <% if(count>1){ %>
+        <a class="link"><%= count %> move events</a>
+        <% } %>
+    </div>
+</div>

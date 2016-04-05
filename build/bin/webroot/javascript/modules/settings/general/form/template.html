@@ -1,0 +1,95 @@
+<div class="ui form">
+    <div class="field">
+        <label data-i18n="settings.title.app-name" data-tip="settings.tips.app-name"></label>
+        <input class="validate validate-required" type="text" name="name" value="<%- app_name %>">
+    </div>
+    <div class="field">
+        <label data-i18n="settings.title.url" data-tip="settings.tip.url"></label>
+        <div class="ui fluid input">
+            <input class="validate validate-url" type="text" placeholder="http://mysite.com" name="metadata.url" value="<%- app_url %>">
+        </div>
+    </div>
+    <div class="field">
+        <label data-i18n="settings.title.default-lang" data-tip="settings.tips.default-lang"></label>
+
+        <div class="ui fluid search selection dropdown lang">
+            <input type="hidden" name="defaultLang" value="<%- default_lang %>">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Language</div>
+            <div class="menu"></div>
+        </div>
+    </div>
+    <div class="field">
+        <label data-i18n="settings.title.description" data-tip="settings.tip.description"></label>
+        <textarea name="metadata.desc"><%- desc %></textarea>
+    </div>
+
+    <h4 class="ui header">
+        <span data-i18n="settings.title.release-product"></span>
+        <span data-tip="settings.tip.release-product"></span>
+    </h4>
+
+    <div class="fields release-product-fields">
+        <!-- henrytodo:临时改为sixteen, 上传文件支持后应改回ten -->
+        <div class="sixteen wide field">
+            <div class="ui top attached tabular menu os" style="margin-bottom:20px;">
+                <a class="active item" data-value="ios">iOS</a>
+                <a class="item" data-value="android">Android</a>
+            </div>
+            <div class="ui active bottom attached tab" data-tab="ios">
+                <label data-tip="settings.tips.ios-schema">iOS URL Schema</label>
+                <input type="text" name="urlSchemas.ios" value="<%- uios %>">
+                <label data-tip="settings.tips.ios-id">App Store ID</label>
+                <input type="text" name="appStoreIds.itunesId" value="<%- itunesid %>">
+                <label data-tip="settings.tips.platform">iTunes App Store</label>
+                <input type="text" name="platforms.iTunes App Store" value="<%- ios %>">
+            </div>
+
+            <div class="ui bottom attached tab" data-tab="android">
+                <label data-tip="settings.tips.android-schema">Android URL Schema</label>
+                <input type="text" name="urlSchemas.android" value="<%- uandroid %>">
+                <label data-tip="settings.tips.android-id">Android Package Name</label>
+                <input type="text" name="appStoreIds.packageName" value="<%- package %>">
+                <label data-tip="settings.tips.platform">Google Play Store</label>
+                <input type="text" name="platforms.Google Play Store" value="<%- android %>">
+            </div>
+        </div>
+        <!-- henrytodo:临时加上隐藏此元素, 上传文件支持后应显示 -->
+        <div class="six wide field" style="display: none;">
+            <label data-i18n="settings.title.app-icon" data-tip="settings.tip.icon"></label>
+            <div class="container-flex">
+                <% if(app_icon) {%>
+                <div id="app-publish-icon-empty" class="app-publish-icon-empty" style="background-repeat:no-repeat;background-image:url(<%= app_icon %>);opacity:1;" ></div>
+                <div id="upload-zone" class="flex-1">
+                    <div class="ui button upload-choose btn-grey" data-i18n="settings.tag.upload-choose" style="display:none"></div>
+                    <div class="ui button upload-confirm primary" data-i18n="settings.tag.upload-confirm" style="display:none"></div>
+                    <div class="ui button upload-remove btn-delete" data-i18n="settings.tag.upload-remove" style="display:inline-block"></div>
+                    <div class="app-label" data-i18n="settings.tip.upload"></div>
+                </div>
+                <% }else{ %>
+                <div id="app-publish-icon-empty" class="app-publish-icon-empty"></div>
+                <div id="upload-zone" class="flex-1">
+                    <div class="ui button upload-choose btn-grey" data-i18n="settings.tag.upload-choose" style="display:inline-block">Choose a File</div>
+                    <div class="ui button upload-confirm primary" data-i18n="settings.tag.upload-confirm" style="display:none">Upload</div>
+                    <div class="ui button upload-remove btn-delete" data-i18n="settings.tag.upload-remove" style="display:none">Remove</div>
+                    <div class="app-label" data-i18n="settings.tip.upload"></div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-hide">
+        <h4 class="ui header" data-i18n="settings.title.app-permission"></h4>
+        <p data-i18n="settings.tip.app-permission" data-tip="settings.tip.allow-create"></p>
+        <div class="inline field">
+            <div class="ui toggle checkbox">
+                <input type="checkbox" name="enableCreateObject" checked>
+                <label data-i18n="settings.title.allow-create"></label>
+            </div>
+        </div>
+    </div>
+    <div class="ui clearing divider ui-hide"></div>
+    <div class="ui button left floated delete-app btn-delete" data-i18n="settings.tag.delete-app"></div>
+    <div class="ui primary submit button right floated" data-i18n="common.tag.save-change"></div>
+</div>

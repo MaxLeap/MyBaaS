@@ -1,0 +1,39 @@
+<div class="ui form">
+    <div class="field required">
+        <label data-i18n="clouddata.title.column-name"></label>
+        <input type="text" class="validate validate-columnname" name="column-name" data-i18n="[placeholder]clouddata.placeholder.add-column">
+    </div>
+    <div class="two fields">
+        <div class="field required fluid">
+            <label data-i18n="clouddata.title.column-type"></label>
+            <div class="ui selection dropdown dropdown-parts validate validate-required type-selector">
+                <input type="hidden" name="type"/>
+                <div class="default text" data-i18n="clouddata.title.select-type"></div>
+                <i class="angle down icon dropdown"></i>
+                <div class="menu">
+                    <div class="item" data-value="String">String</div>
+                    <div class="item" data-value="Number">Number</div>
+                    <div class="item" data-value="Boolean">Boolean</div>
+                    <div class="item" data-value="Date">Date</div>
+                    <div class="item" data-value="File">File</div>
+                    <div class="item" data-value="GeoPoint">GeoPoint</div>
+                    <div class="item" data-value="Array">Array</div>
+                    <div class="item" data-value="Object">Object</div>
+                    <div class="item" data-value="Pointer">Pointer</div>
+                    <div class="item" data-value="Relation">Relation</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field required" style="display:none">
+            <label data-i18n="clouddata.title.target-class"></label>
+            <div class="ui selection dropdown dropdown-parts validate-targetclass target-selector">
+                <input type="hidden" name="target"/>
+                <div class="default text" data-i18n="clouddata.title.target-class"></div>
+                <i class="angle down icon dropdown"></i>
+                <div class="menu"></div>
+            </div>
+        </div>
+    </div>
+    <p class="tip" data-i18n="clouddata.tip.add-column"></p>
+</div>

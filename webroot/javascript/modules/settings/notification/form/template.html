@@ -1,0 +1,41 @@
+<div class="ui form">
+    <h3 class="ui header" data-i18n="settings.title.apple-cert" data-tip="settings.tips.apple-cert"></h3>
+
+    <div class="field">
+        <label data-tip="settings.tips.cert">Certificate file (.p12)</label>
+        <span id="apple-cert-upload">
+            <div class="ui btn-grey button upload-choose" data-i18n="settings.tag.upload-choose"></div>
+        </span>
+        <% if(cert){ %>
+            <span id="apple-cert-desc" class="success" style="color:green;">
+                <span data-i18n="settings.tag.cert-uploaded"></span>
+            </span>
+        <% }else{ %>
+            <span id="apple-cert-desc" class="empty" style="color:grey;">
+                <span data-i18n="settings.tag.cert-empty"></span>
+            </span>
+        <% } %>
+        <span id="apple-cert-selected" style="display:none;">
+            <span data-i18n="settings.tag.cert-selected"></span>
+        </span>
+        <span id="apple-cert-error" style="display:none;">
+            <span data-i18n="settings.tag.cert-error"></span>
+        </span>
+    </div>
+    <div class="field">
+        <label data-tip="settings.tips.password">Password</label>
+        <input type="password" value="<%- password %>" name="pushConfig.appleConfig.password">
+    </div>
+
+    <h3 class="ui header" data-i18n="settings.title.android-cert" data-tip="settings.tips.android-cert"></h3>
+    <div class="field">
+        <label data-tip="settings.tips.api-key">API Key</label>
+        <input type="text" value="<%- apiKey %>" name="pushConfig.gcmConfig.apiKey">
+    </div>
+    <div class="field">
+        <label data-tip="settings.tips.sender-id">Sender ID</label>
+        <input type="text" value="<%- senderId %>" name="pushConfig.gcmConfig.senderId">
+    </div>
+
+    <div class="ui primary submit button right floated" data-i18n="common.tag.save-change"></div>
+</div>

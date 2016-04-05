@@ -1,0 +1,37 @@
+<div class="ui form">
+    <div class="field">
+        <label data-i18n="clouddata.tag.classname"></label>
+        <input class="validate validate-columnname" type="text" data-i18n="[placeholder]clouddata.placeholder.add-class" name="name">
+    </div>
+    <p class="tip" data-i18n="clouddata.tip.new-class"></p>
+    <div class="grouped fields">
+        <label data-i18n="clouddata.tips.set-permission"></label>
+        <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" name="acl-type" value="Shared" checked="checked">
+                <label data-i18n="clouddata.tips.shared"></label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" name="acl-type" value="Private">
+                <label data-i18n="clouddata.tips.private"></label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" name="acl-type" value="ReadOnly">
+                <label data-i18n="clouddata.tips.readonly"></label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" name="acl-type" value="Full">
+                <label data-i18n="clouddata.tips.full"></label>
+            </div>
+        </div>
+    </div>
+    <div class="ui info message">
+        <p data-i18n="[html]clouddata.tips.permission-type"></p>
+    </div>
+</div>

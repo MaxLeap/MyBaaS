@@ -1,0 +1,11 @@
+ /*
+ * # Semantic UI - 1.9.2
+ * https://github.com/Semantic-Org/Semantic-UI
+ * http://www.semantic-ui.com/
+ *
+ * Copyright 2014 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.ui.dropdown.multiple{width:100%;padding:0}.ui.dropdown.multiple .choice{overflow:hidden;padding:0 5px;background:#fff}.ui.dropdown.multiple .choice>.ui.label{margin-top:5px;margin-right:5px;float:left}.ui.dropdown.multiple .choice>.ui.label.active{background-color:#000;color:#fff}.ui.dropdown.multiple .choice>input{float:left;padding:10px 0;border:0;height:100%;width:100%;outline:0;background:0 0;box-shadow:none}.ui.dropdown.multiple .icon.dropdown,.ui.dropdown.multiple>.measure{display:none}.ui.dropdown.multiple>.menu{width:100%}.ui.dropdown.multiple>.icon.dropdown{top:10px}.ui.dropdown.multiple>.text{top:10px;left:5px;position:absolute}.ui.dropdown.multiple>.menu>.item.chosen{display:none}
